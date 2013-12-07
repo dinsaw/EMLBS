@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+login error
+</body>
+</html>
+<action name="login"> 
+         <result >pages/index.jsp</result>
+    </action>
+    <action name="loginprocess" class="dev.dinesh.emlbs.action.Login"> 
+         <result name="SUCCESS">pages/setup.jsp</result>
+         <result name="FAILURE">pages/loginerrr.html</result>
+    </action>
+    <action name="logout" class="dev.dinesh.emlbs.action.Login" method="logout"> 
+         <result name="SUCCESS">pages/index.jsp</result>
+    </action>
+    <action name="profile" class="dev.dinesh.emlbs.action.Profile"> 
+         <result name="SUCCESS">pages/setup.jsp</result>
+         <result name="FAILURE">pages/index.jsp</result>
+    </action>

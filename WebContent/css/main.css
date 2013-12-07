@@ -1,0 +1,362 @@
+/* body {
+	font-family: sans-serif;
+}
+#container{
+	width:100%;
+	background-color: orange;
+	border: 1px;
+}
+#title{
+	color: blue;
+	background-color: inherit;
+	border: 2px;
+}
+#leftbar{
+	background-color: inherit;
+	height:200px;
+	width:100px;
+	float:left;
+	border: 1px;
+}
+#content{
+	background-color:inherit;
+	height:200px;
+	width:300px;
+	float:left;
+	border: 1px;
+}
+#footer{
+	background-color:inherit;
+	clear:both;
+	border: 1px;
+}
+ */
+
+
+;------
+
+body,
+	html {
+		margin:0;
+		padding:0;
+		color:#000;
+		height:100%;
+		background-color: #4D3333;
+	}
+	#wrap {
+		border-color: #B52929;
+		width:900px;
+		margin:0 auto;
+		border-radius:4px;
+		font-family: verdana,helvetica,arial,sans-serif;
+		font-size: 12px;
+		background-color: white;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		top:30px;
+		position:relative;
+	}
+	#header {
+		border-top-left-radius:4px;
+		border-top-right-radius:4px;
+    	padding-bottom: 30px;
+    	padding-left: 10px;
+    	padding-right: 10px;
+    	padding-top: 10px;
+		background-color: #BFBFBF;
+	}
+	#header h1 {
+	    margin:0;
+	    color: teal;
+    }
+	#nav {
+		padding:5px 10px; 
+		background-color: inherit;
+		border-style: solid;
+		border-color: #BFBFBF;
+		border-width: 2px 0px 2px 0px;
+	}
+	#nav ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	#nav li {
+		display:inline;
+		margin:0;
+		padding:0;
+	}
+	#main {
+		float:right;
+		width: 70%;
+		padding: 10px 10px 10px 10px;
+		overflow: scroll auto;
+		background-color: white;	
+		
+	}
+	h2 {
+		margin:0 0 1em;
+	}
+	#sidebar {
+		float:right;
+		width:20%;
+		border: 2px;
+		border-style : solid;
+		border-color : green;
+		padding:10px;
+		background-color: white;
+		margin: 5px;
+		border-radius:4px;
+	}
+	#footer {
+		clear:both;
+		padding:5px 10px;
+		background-color: inherit;
+		
+		border-style: solid;
+		border-color: #BFBFBF;
+		border-width: 2px 0px 0px 0px;
+	}
+	#footer p {
+		margin:0;
+    }
+	* html #footer {
+		height:1px;
+	}
+	
+	a:LINK {
+	font-family: sans-serif,arial, helvetica;
+	text-decoration: none;
+	color: green;
+	font-size: 12px;
+	background-color:transparent
+		}
+	a:HOVER {
+	text-decoration: underline;
+		}
+		
+	a:VISITED {
+	font-family: sans-serif,arial, helvetica;
+	text-decoration: none;
+	color: green;
+	font-size: 12px;
+	background-color:transparent
+		}
+	#nav a:LINK{
+	font-family: sans-serif,arial, helvetica;
+	text-decoration: none;
+	color: green;
+	font-size: 12px;
+	background-color:transparent
+		}
+	#nav a:HOVER {
+	text-decoration: underline;
+		}
+	#nav a:VISITED {
+	font-family: sans-serif,arial, helvetica;
+	text-decoration: none;
+	font-size: 12px;
+		}
+	#nav #current a {
+	font-family: sans-serif,arial, helvetica;
+	text-decoration: none;
+	font-size: 12px;
+		}
+	#map {
+	height: 400px;
+	cursor:crosshair;
+	}
+	#map img{max-width: inherit;}
+	#popin {
+	background: white;
+	padding: 15px;
+	box-shadow: 0 0 20px #999;
+	border-radius: 2px;
+	}
+	#configmap {
+	height:600px;
+	}
+	#configmap img{max-width: inherit;}
+	#configpopin {
+	background: white;
+	width: 70%;
+	float: left;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	padding: 15px;
+	box-shadow: 0 0 20px #999;
+	border-radius: 2px;
+	}
+	div.verticalline {
+		width: 2px;
+		min-height: 500px;
+		background-color: #BFBFBF;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		float: left;
+		padding: 0px;
+		}
+	div.compartment {
+		width: 160px;
+		background-color: inherit;
+		border-style: groove;
+		border-width: 1px;
+		border-color: #E5D2AE;
+		padding: 10px 10px 10px 10px;
+		float: left;
+		margin: 10px 10px 10px 10px;
+		padding: 0px;
+		border-radius:4px;
+		}
+	div.compartment:hover {
+/* 		background-color: #E5D2AE; */
+		box-shadow: 3px 3px 10px #888888;
+		
+		}
+	div.compartmentholder > a:link {
+		text-decoration: none;
+		font-size: 16px;
+		}
+	div.noofcomplaint {
+		width: 100%;
+		text-align: center;
+		font-size: 90px;
+		color: #5D4B29;
+		
+	}
+	div.deptname	{	
+		width: 100%;
+		text-align: center;
+		color: #0E4173;
+		
+		}
+	div.compartmentholder {
+		background-color: inherit;
+		border : 5px;
+		overflow: hidden;
+		clear: both;
+		}
+	div.compartmenttitle {
+		padding: 5px 20px 5px 5px;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+		background-color: #E6DFDF;
+		margin-left: auto;
+		margin-right: auto;
+		color: black;
+		float: left;
+		clear: both;
+		}
+	#warning {
+		clear:both;
+		padding:5px 10px;
+		background-color: inherit;
+		border-style: solid;
+		border-color: #BFBFBF;
+		border-width: 2px 0px 0px 0px;
+		color: red;
+	}
+	.form1 {
+		padding: 10px;
+	}
+	#topbar {
+		top: 0;
+		background-color: teal;
+		overflow: hidden;
+		color: white;
+		clear: both;
+		width: 100%; 
+		position: fixed;
+		z-index: 10000;
+		margin-bottom: 10px;
+		box-shadow: 0 0 2px 0 #999;
+		font-size: 16px;
+		
+	}
+	#topbartitle {
+		float:left;
+		margin-left: 10px;
+		font-family: Sans-Serif;
+		font-weight: bolder;
+	}
+	#topbartitle a:LINK{
+		color: orange;
+		font-weight: bold;
+	}
+	#topbartitle a:HOVER{
+		color: aqua;
+	}
+	#topbartitle a:VISITED{
+		color: orange;
+	}
+	#topbarright {
+		float:right;
+		margin-right: 10px;
+	}
+	#topbarright a:LINK{
+		color: orange;
+		font-weight: bold;
+	}
+	#topbarright a:HOVER{
+		color: aqua;
+	}
+	#topbarright a:VISITED{
+		color: orange;
+	}
+	#leftbar {
+		top: 20px;
+		background-color: tan;
+		color: white;
+		clear: left;
+		width: 15%;
+		height: 100%; 
+		position: fixed;
+		z-index: 10000;
+		font-size: 16px;
+		padding: 20px 20px 20px 20px;
+	}
+	#screenmain {
+		float:right;
+		top: 30px;
+		width: 80%;
+		height: 100%; 
+		background-color: green;
+		margin-top : 30px;
+		padding: 5px 10px 10px 10px;
+		overflow: scroll auto;
+		background-color: white;	
+		
+	}
+	div.situationBox {
+		font-family: tohima,sans-serif;
+		
+	}
+	#firstHalf {
+		background: white;
+		padding: 15px;
+		box-shadow: 0 0 20px #999;
+		border-radius: 2px;
+		width: 40%;
+		float: left;
+	}
+	#firstHalf img {
+		max-width: 100%;
+	}
+	#secondHalf {
+		padding: 15px;
+		float:left;
+		width:50%;
+	}
+	#onlyImage {
+		background: white;
+		padding: 15px;
+		box-shadow: 0 0 20px #999;
+		border-radius: 2px;
+		width : 90%;
+		float: none;
+		clear: right;
+		margin-bottom: 15px;
+	}
+	#onlyImage img {
+		max-width: 100%;
+	}

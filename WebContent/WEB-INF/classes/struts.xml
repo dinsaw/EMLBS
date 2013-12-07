@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+   "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name="struts.devMode" value="false" />
+<constant name="struts.custom.i18n.resources" value="global" /> 
+<package name="public" namespace="/" extends="struts-default">
+    <action name="intro" class="dev.dinesh.emlbs.action.IntroAction" method="execute">
+        <result name="SUCCESS">index.jsp</result>
+        <result name="FAILURE">UnderCons.jsp</result>
+    </action>
+    <action name="dbhiber" class="dev.dinesh.emlbs.action.DBHiber">
+          <result name="success">index.jsp</result>
+      </action>
+</package>
+<package name="private" namespace="/testing" extends="struts-default">
+    <action name="index"> 
+         <result >pages/index.jsp</result>
+      </action>
+    <action name="clickeventtest"> 
+         <result >pages/clickevent.jsp</result>
+      </action>
+</package>
+<package name="setup" namespace="/setup" extends="struts-default">
+    <result-types>
+        <result-type name="imageResult" class="dev.dinesh.emlbs.action.customresults.CustomImageBytesResult"></result-type>
+    </result-types>
+    <interceptors>
+       	<interceptor name="authinterceptor" class="dev.dinesh.emlbs.interceptor.AuthenticationInterceptor"></interceptor> 
+		<interceptor name="firsttime" class="dev.dinesh.emlbs.interceptor.FirstTimeInt"></interceptor>
+		<interceptor-stack name="aStack">
+			<interceptor-ref name="authinterceptor"></interceptor-ref>	
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</interceptor-stack>
+    </interceptors>
+    <global-results>
+    	<result name="index">pages/index.jsp</result>
+    	<result name="changepass">pages/changepass.jsp</result>
+    </global-results>
+    <action name=""> 
+         <result >pages/index.jsp</result>
+    </action>
+    <action name="index"> 
+         <result >pages/index.jsp</result>
+    </action>
+    
+    <action name="Login" class="dev.dinesh.emlbs.action.Login">
+	<result name="input">pages/index.jsp</result>
+	<result name="success">pages/controlhome.jsp</result>
+	</action>
+	<action name="controlhome">
+	    <interceptor-ref name="aStack"></interceptor-ref>
+	    <result>pages/controlhome.jsp</result>
+    </action>
+    <action name="changepass">
+	    <interceptor-ref name="aStack"></interceptor-ref>
+	    <result>pages/changepass.jsp</result>
+    </action>
+	<action name="Success">
+		<interceptor-ref name="aStack"></interceptor-ref>
+		<result>pages/success.jsp</result>
+	</action>
+	<action name="Logout" class="dev.dinesh.emlbs.action.Logout">
+		<interceptor-ref name="aStack"></interceptor-ref>
+		<result name="success" type="redirect">index</result>
+	</action>
+	<action name="dochangepass" class="dev.dinesh.emlbs.action.ChangePass">
+	<result name="input">pages/changepass.jsp</result>
+	<result name="success">pages/controlhome.jsp</result>
+	</action>
+	<action name="appsetup" class="dev.dinesh.emlbs.action.AppDetails" method="isSetupInitiated">
+   		<interceptor-ref name="aStack"></interceptor-ref>
+	    <result name="error">pages/setupapp.jsp</result>
+	    <result name="success">pages/setupdetails.jsp</result>
+	</action>
+	<action name="appaction" class="dev.dinesh.emlbs.action.AppAction">
+   		<interceptor-ref name="aStack"></interceptor-ref>
+   		<result name="input">pages/setupapp.jsp</result>
+	    <result name="success">pages/controlhome.jsp</result>	    
+	</action>
+	<action name="appdataaction" class="dev.dinesh.emlbs.action.AppDataAction" method="listApps">
+   		<interceptor-ref name="aStack"></interceptor-ref>
+	    <result name="success">pages/basicappconfig.jsp</result>	    
+	</action>
+	<action name="appstatuschange" class="dev.dinesh.emlbs.action.AppDetails" method="toggleAppStatus">
+   		<interceptor-ref name="aStack"></interceptor-ref>
+	    <result name="success">pages/notification.jsp</result>	    
+	</action>
+	<action name="statuschange" class="dev.dinesh.emlbs.action.ChangeRequestStatus" method="changeRequestStatus">
+   		<interceptor-ref name="aStack"></interceptor-ref>
+	    <result name="success">pages/statuschangenoti.jsp</result>	    
+	</action>
+	<action name="serviceconfig">
+	       		<interceptor-ref name="aStack"></interceptor-ref>
+       	   <result>pages/serviceconfig.jsp</result>
+      </action>
+   	<action name="addOTA" class="dev.dinesh.emlbs.action.AddOverlayTypeAction">
+	       		<interceptor-ref name="aStack"></interceptor-ref>
+	       		<interceptor-ref name="fileUpload">
+	       		    <param name="allowedTypes">image/png</param>
+	       		    <param name="maximumSize">10240</param>
+	       		</interceptor-ref>
+	       		<interceptor-ref name="params">
+                <param name="excludeParams">dojo\..*,^struts\..*</param>
+            </interceptor-ref>
+            <interceptor-ref name="validation">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+            <interceptor-ref name="workflow">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+       	   <result name="input">pages/addoverlaytypedialog.jsp</result>
+		<result name="success">pages/addoverlaytypedialog.jsp</result>
+      </action>
+   	<action name="addOTDialog">
+	       <interceptor-ref name="aStack"></interceptor-ref>
+       	   <result>pages/addoverlaytypedialog.jsp</result>
+      </action>
+   		<action name="addRHDialog" class="dev.dinesh.emlbs.action.HandlerAction" method="display">
+	       <interceptor-ref name="aStack"></interceptor-ref>
+       	   <result name="success">pages/addRequestHandlerDialog.jsp</result>
+       	   <result name="input">pages/addRequestHandlerDialog.jsp</result>
+      </action>
+      <action name="addRSDialog">
+	       <interceptor-ref name="aStack"></interceptor-ref>
+       	   <result>pages/addRequestStatusDialog.jsp</result>
+      </action>
+      <action name="addRS" class="dev.dinesh.emlbs.action.RequestStatusAction">
+	       <interceptor-ref name="aStack"></interceptor-ref>
+       	   <result name="success">pages/addRequestStatusDialog.jsp</result>
+       	   <result name="input">pages/addRequestStatusDialog.jsp</result>
+      </action>
+   		<action name="addRH" class="dev.dinesh.emlbs.action.HandlerAction">
+	       		<interceptor-ref name="aStack"></interceptor-ref>
+       	   <result name="input">pages/addRequestHandlerDialog.jsp</result>
+		<result name="success">pages/controlhome.jsp</result>
+      </action>
+      <action name="overlayConfigScreen" class="dev.dinesh.emlbs.action.OverlayPage" method="display">
+          <interceptor-ref name="aStack"></interceptor-ref>
+          <result name="success">pages/overlayconfig.jsp</result>
+      </action>
+      <action name="addoverlay" class="dev.dinesh.emlbs.action.AddOverlay">
+          <interceptor-ref name="aStack"></interceptor-ref>
+          <result name="input">pages/overlayconfig.jsp</result>
+      </action>
+       <action name="locoNewsConfigScreen" class="dev.dinesh.emlbs.action.LoconewsPage" method="display">
+          <interceptor-ref name="aStack"></interceptor-ref>
+          <result name="success">pages/addloconews.jsp</result>
+      </action>
+      <action name="addloconews" class="dev.dinesh.emlbs.action.AddLocoNews">
+          <interceptor-ref name="aStack"></interceptor-ref>
+          <result name="input">pages/addloconews.jsp</result>
+          <result name="error">pages/addloconews.jsp</result>
+      </action>
+      <action name="roles" class="dev.dinesh.emlbs.action.RolesPage" method="display">
+          <interceptor-ref name="aStack"></interceptor-ref>
+          <result name="success">pages/roles.jsp</result>
+      </action>
+      <action name="rolescreen" class="dev.dinesh.emlbs.action.RoleScreen" method="display">
+          <interceptor-ref name="aStack"></interceptor-ref>
+          <result name="success">pages/rolescreen.jsp</result>
+      </action>
+      <action name="rolescreenByStatus" class="dev.dinesh.emlbs.action.RoleScreen">
+          <interceptor-ref name="aStack"></interceptor-ref>
+          <result name="success">pages/rolescreen.jsp</result>
+      </action>
+      <action name="requestImage" class="dev.dinesh.emlbs.action.RequestImageAction">
+          <result name="success" type="imageResult"/>
+      </action>
+       <action name="getOverlayTypeIcon" class="dev.dinesh.emlbs.action.GetOverlayTypeIcon">
+          <result name="success" type="imageResult"/>
+      </action>
+       <action name="complaintMapFullScreen">
+          <result name="success">pages/fullscreenrolescreen.jsp</result>
+      </action>
+       <action name="showOnMap" class="dev.dinesh.emlbs.action.ComplaintOnMap">
+           <interceptor-ref name="aStack"></interceptor-ref>
+          <result name="success">pages/complaintonmap.jsp</result>
+      </action>
+</package>
+<package name="default" namespace="/open" extends="json-default">
+      <action name="getMapPointsJSONResult" 
+           class="dev.dinesh.emlbs.action.AppAreaJSONAction">
+       	   <result type="json" />
+      </action>
+       <action name="getMapPolyAsText" 
+           class="dev.dinesh.emlbs.action.AppMapAction">
+       	   <result name="success">appmap.jsp</result>
+      </action>
+</package>
+<package name="desktop" namespace="/setup" extends="json-default">
+    <action name="getcomplaintsJSON" class="dev.dinesh.emlbs.action.json.ComplaintsJSON">
+          <result type="json"></result>
+      </action>
+     
+</package>
+<package name="mob" namespace="/" extends="json-default">
+    <action name="loginjson" class="dev.dinesh.emlbs.action.mobaction.Login">
+          <result type="json"></result>
+      </action>
+      <action name="issuerequest" class="dev.dinesh.emlbs.action.mobaction.SendRequest">
+          <result type="json"></result>
+      </action>
+      <action name="getalloverlaytypes" class="dev.dinesh.emlbs.action.mobaction.GetUserOverlayTypes">
+          <result type="json"></result>
+      </action>
+      <action name="getloconewstitles" class="dev.dinesh.emlbs.action.mobaction.GetLocoNewsTitles">
+          <result type="json"></result>
+      </action>
+      <action name="getloconewsbytitle" class="dev.dinesh.emlbs.action.mobaction.GetLocoNewsByTitle">
+          <result type="json"></result>
+      </action>
+       <action name="getMarkers" class="dev.dinesh.emlbs.action.mobaction.GetAllAdminStatedOverlays">
+          <result type="json"></result>
+      </action>
+</package> 
+</struts>

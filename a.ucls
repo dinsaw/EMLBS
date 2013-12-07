@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.2" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="dev.dinesh.emlbs.persistence.LocoNews" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/LocoNews.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="146" width="133" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="dev.dinesh.emlbs.persistence.AdminOverlayType" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/AdminOverlayType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="56" width="133" x="214" y="391"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="dev.dinesh.emlbs.persistence.AdminStatedOverlay" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/AdminStatedOverlay.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="56" width="143" x="41" y="223"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="dev.dinesh.emlbs.persistence.App" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/App.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="128" width="133" x="214" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="dev.dinesh.emlbs.persistence.IssuedRequest" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/IssuedRequest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="110" width="133" x="560" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="dev.dinesh.emlbs.persistence.Overlay" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/Overlay.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="92" width="133" x="387" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="dev.dinesh.emlbs.persistence.OverlayType" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/OverlayType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="128" width="133" x="224" y="223"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="dev.dinesh.emlbs.persistence.RequestHandeler" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/RequestHandeler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="110" width="133" x="752" y="223"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="dev.dinesh.emlbs.persistence.RequestStatus" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/RequestStatus.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="128" width="141" x="571" y="223"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="dev.dinesh.emlbs.persistence.SiteAdmin" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/SiteAdmin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="128" width="133" x="41" y="391"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="dev.dinesh.emlbs.persistence.UserM" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/UserM.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="110" width="133" x="387" y="391"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="dev.dinesh.emlbs.persistence.UserStatedOverlay" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/UserStatedOverlay.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="56" width="134" x="397" y="223"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="dev.dinesh.emlbs.persistence.UserOverlayType" project="EMLBS" 
+    file="/EMLBS/src/dev/dinesh/emlbs/persistence/UserOverlayType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="56" width="133" x="560" y="391"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <association id="14">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="15" name="requestStatus"/>      
+      <multiplicity id="16" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="17">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="18">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="19" name="userOverlayType"/>      
+      <multiplicity id="20" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="21">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="22" name="userOverlayType"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <generalization id="25">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="26">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="27" name="adminOverlayType"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="30" name="overlay"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="33" name="user"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="35">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="36">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="37" name="siteAdmin"/>      
+      <multiplicity id="38" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

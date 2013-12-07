@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+<field name="lat">
+      <field-validator type="required">
+          <message>Latitude Value required.</message>
+      </field-validator>
+      <field-validator type="double">
+         <message>Wrong Format.</message>
+      </field-validator>
+  </field>
+<field name="lang">
+      <field-validator type="required">
+          <message>Longitude Value required.</message>
+      </field-validator>
+      <field-validator type="double">
+         <message>Wrong Format.</message>
+      </field-validator>
+  </field>
+</validators>
